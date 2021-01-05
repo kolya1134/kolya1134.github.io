@@ -1,1 +1,29 @@
-webpage
+<body style="background: black; color: white; font-size: 50px; font-family: 'Brush Script MT', cursive;">
+<center>
+	<a>welcome to my webpage</a>
+	<br><br>
+	<a>links: <a href="images.html">images</a> <a href="software.html">software</a> <a href="index.html">home</a></a>
+	<script src="three.js"></script>
+	<script type="text/javascript">
+		const scene = new THREE.Scene();
+		const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+		const renderer = new THREE.WebGLRenderer();
+		renderer.setSize(window.innerWidth, window.innerHeight);
+		document.body.appendChild(renderer.domElement);
+		const loader = new THREE.FontLoader();
+		loader.load('Kanit_Bold.json', function(font) {
+			const geometry = new THREE.TextGeometry('bro', {
+			font: font,
+			size: 80,
+			height: 5,
+			curveSegments: 12,
+			bevelEnabled: true,
+			bevelThickness: 10,
+			bevelSize: 8,
+			bevelOffset: 0,
+			bevelSegments: 5
+			});
+		});
+	</script>
+</center>
+</body>
