@@ -24,7 +24,9 @@
 			bevelOffset: 0,
 			bevelSegments: 5
 			});
-			scene.add( geometry );
+			var textmaterial = new THREE.MeshLambertMaterial({color: 0x8121ff})
+			var text = new THREE.Mesh(gemoetry, textmaterial)
+			scene.add( text );
 		});
 		const geometry = new THREE.BoxGeometry();
 		const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
