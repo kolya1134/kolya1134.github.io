@@ -1,4 +1,4 @@
-<body style="background: #59e0ff; color: white; font-size: 50px; font-family: 'Brush Script MT', cursive;">
+<body style="background: #59e0ff; color: white; font-size: 35px; font-family: 'Brush Script MT', cursive;">
 <center>
 	<a>webpage</a>
 	<br><br>
@@ -8,7 +8,7 @@
 		const scene = new THREE.Scene();
 		const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 		const renderer = new THREE.WebGLRenderer();
-		renderer.setSize(window.innerWidth, window.innerHeight / 2);
+		renderer.setSize(window.innerWidth, window.innerHeight);
 		renderer.setClearColor( 0x59e0ff, 1 );
 		document.body.appendChild(renderer.domElement);
 		const loader = new THREE.FontLoader();
@@ -43,5 +43,7 @@
 		}
 		animate();
 	</script>
+	<br><br><br>
+	i dont know what the fuck that down there is but im not gonna change it
 </center>
 </body>
