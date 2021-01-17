@@ -12,7 +12,7 @@
 		document.body.appendChild(renderer.domElement);
 		const loader = new THREE.FontLoader();
 		loader.load('Kanit_Bold.json', function(font) {
-			const geometry = new THREE.TextGeometry('bro', {
+			const geometry = new THREE.TextGeometry('bro javascript', {
 			font: font,
 			size: 80,
 			height: 5,
@@ -24,6 +24,20 @@
 			bevelSegments: 5
 			});
 		});
+		const geometry = new THREE.BoxGeometry();
+		const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+		const cube = new THREE.Mesh( geometry, material );
+		scene.add( cube );
+
+		camera.position.z = 5;
+
+		function animate() {
+			requestAnimationFrame( animate );
+			cube.rotation.x += 0.01
+			cube.rotation.y += 0.01
+			renderer.render( scene, camera );
+		}
+		animate();
 	</script>
 </center>
 </body>
