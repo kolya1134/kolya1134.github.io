@@ -1,4 +1,4 @@
-<body style="background: black; color: white; font-size: 50px; font-family: 'Brush Script MT', cursive;">
+<body style="background: #59e0ff; color: white; font-size: 50px; font-family: 'Brush Script MT', cursive;">
 <center>
 	<a>webpage</a>
 	<br><br>
@@ -8,7 +8,8 @@
 		const scene = new THREE.Scene();
 		const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 		const renderer = new THREE.WebGLRenderer();
-		renderer.setSize(window.innerWidth, window.innerHeight);
+		renderer.setSize(window.innerWidth, window.innerHeight / 2);
+		renderer.setClearColor( 0x59e0ff, 1 );
 		document.body.appendChild(renderer.domElement);
 		const loader = new THREE.FontLoader();
 		loader.load('Kanit_Bold.json', function(font) {
@@ -23,6 +24,7 @@
 			bevelOffset: 0,
 			bevelSegments: 5
 			});
+			scene.add( geometry );
 		});
 		const geometry = new THREE.BoxGeometry();
 		const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
